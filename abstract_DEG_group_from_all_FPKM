@@ -1,0 +1,6 @@
+#annotion
+if you want to abstract DEG group from all FPKM,the workflow DEG group must be goven.
+you can run the below command line on you Linux，when you get the DEG group
+$for i in `DEG_group.xls |cut -f1`;do cat cat all_fpkm.list |awk '$1=="'$i'"{print $1,$2,$5}' >T3_T5_T6vsT1_T2_T4.txt
+comment:$2 represent T3_T5_T6 and $5 represent T1_T2_T4
+

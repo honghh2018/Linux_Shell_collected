@@ -1,0 +1,17 @@
+#NCBI upload
+#if you want to transport large scale data to NCBI,for instance,SRA metadata upload.
+#For Linux system,you should download Aspera tool and install.
+#so,let start to transport the data used below command line.
+#first and foremost,we need NCBI account,when you read to transport data.
+#sgin in your accout,and to select you transport way with aspera.
+#get the key file saved in your dir.
+#then,use below command to upload you data
+ ascp -i <path/to/key_file> -QT -l100m -k1 -d <path/to/folder/containing files> subasp@upload.ncbi.nlm.nih.gov:uploads/939869915@qq.com_A91Mks1v
+ #note:subasp@upload.ncbi.nlm.nih.gov:uploads/939869915@qq.com_A91Mks1v this was your account attributes 
+  Where:
+           <path/to/key_file> must be an absolute path, e.g.: /home/keys/aspera.openssh
+           <path/to/folder/containing files> needs to specify the local folder that contains all of the files to upload.
+
+Note:the key where you register account.on account that you can download.
+
+#good luck.

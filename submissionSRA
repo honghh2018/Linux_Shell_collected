@@ -1,0 +1,5 @@
+Need fastq clean data for read,and NCBI will turn the fastq into SRA
+you need to name the number of fastq.the below command should be used.
+
+$ll data_gz/ |awk '{print $9}' | sed s/_J414-01//g |sed s/_good//g|sed s/.gz//g >file or STDOUT
+//you should copy this line into NCBI's form named "samplename".

@@ -1,0 +1,2 @@
+#first and foremost,you want to substitute some string on command line at special position,you should try below command.
+$perl -i -pe 's/L01/L02/g' file.sh  #substitute L01 into L02 on source file

@@ -1,5 +1,13 @@
-effective delete file with centainly file type used below commands:
-$find ../ -name "*sam" |xargs rm -rf  delete .sam file
+
+#FTP transport fastq into NCBI
+register a account and sign in.
+use below command on Linux：
+$ftp ftp-private.ncbi.nlm.nih.gov
+input Username and Password type Enter
+$cd cd uploads/939869915@qq.com_8lOzFe8T
+mkdir data
+cd data
+put /home/bmk/sourcedata #finish work
 
 
 

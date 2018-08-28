@@ -1,0 +1,55 @@
+if you want to modify batch of command line,you need try below scripts.
+#!/usr/bin/perl -w
+#use strict;
+use warnings;
+use Cwd qw(abs_path getcwd);
+use FindBin '$Bin';
+
+open(IN,"$ARGV[0]") or die "$!";
+open(SH,">$ARGV[1]");
+my @array=();
+while(<IN>){
+        chomp;
+        push @array,$_;
+}
+my @sortar=sort @array;
+my $count=0;
+for(my $i=0;$i<=$#sortar;$i+=2){
+                #`mkdir "$Bin/Result/L$count"` unless -d "$Bin/Result/L$count";
+        $sortar[$i] =~/(L\d+)/
+                my $cmd="mkdir /home/data/Result/$1 && cd /home/data/Result/$1 && /home/data/hisat/2.0.4/hisat2 --dta -p 6 --rna-strandness RF -x /home/data/genome/Bactrocera_dorsalis.ASM78921v2.genome -1 $sortar[$i] -2 $sortar[$i+1] -S /home/data/Result/$1/$1.HISAT_aln.sam > /home/data/Result/$1/$1.log\n";
+                print SH $cmd;
+}
+
+close IN;
+close SH;
+
+#simple commands
+
+#!/usr/bin/perl 
+use strict;
+use warnings;
+
+open(my $out,">command13-30bamSort.list_new.sh");
+my @arrdata=`find /home/Result/ -name "*HISAT_aln.bam" |sort`; #get data absolute pathway 
+print @arrdata;
+while(my $line=<@arrdata>){
+        chomp($line);
+        $line =~/(L\d+)/;
+        print $out "cd /home/Result/$1/ && /home/samtools/0.1.18/samtools sort /home/Result/$1/$1.HISAT_aln.bam /home/Result/$1/$1.HISAT_aln_sort\n";
+}
+close $out
+
+
+
+
+
+
+
+
+
+
+
+
+
+

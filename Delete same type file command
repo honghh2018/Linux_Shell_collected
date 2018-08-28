@@ -1,0 +1,2 @@
+effective delete file with centainly file type used below commands:
+$find ../ -name "*sam" |xargs rm -rf  #delete .sam file

@@ -1,0 +1,5 @@
+your file,for instance,had blank line itself,so you should get used to below command line:
+$cat filename.fasta |grep -v "^$" >newfile.fasta
+if you like perl language,then using the below command execute the same function:
+$perl -pe 's/^\s+$//g' filename.fasta >newname.fasta or 
+$perl -i -pe 's/^\s+$//g' filename.fasta   #this command can substitute itself immediately. 

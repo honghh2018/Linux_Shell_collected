@@ -1,0 +1,6 @@
+if you need to abstract cerntainly string in your text,command line for Linux below must be used.
+for instance,you try to get "PB10.215242.1" in ">PB10.215242.1|chr278:158785-159112.1" string.
+cat collapsed.fa | grep \> | cut -f1 -d "|" |less
+cat collapsed.fa | grep \> | cut -f1 -d "|" |wc -l   #sum
+cat collapsed.fa | grep \> | cut -f1 -d "|" | uniq |wc -l  #uniq counts
+

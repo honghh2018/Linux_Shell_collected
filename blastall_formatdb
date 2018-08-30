@@ -1,4 +1,4 @@
-For instance,we should maping the given seq into stranscipts(assembly or three generate data),then on the Linux，blast software 
+For instance,we should mapping the given seq into stranscipts(assembly or three generate data),then on the Linux，blast software 
 must be installed.
 first and foremost,we should find the non-redundancy .fa file and read your query seq file(fa).
 when above work alread done,we can begin the maping with blast software.

@@ -3,4 +3,6 @@ for instance,you try to get "PB10.215242.1" in ">PB10.215242.1|chr278:158785-159
 cat collapsed.fa | grep \> | cut -f1 -d "|" |less
 cat collapsed.fa | grep \> | cut -f1 -d "|" |wc -l   #sum
 cat collapsed.fa | grep \> | cut -f1 -d "|" | uniq |wc -l  #uniq counts
+#filter accord with condition:
+cat result3.out |awk '$4 < 700 and $4>=200{print $0}' >filter.result
 

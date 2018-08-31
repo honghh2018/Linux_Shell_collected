@@ -1,0 +1,6 @@
+if your dir have many files,you should take key word,for instance '*L309*' to find it.
+ll Result/ *L309* 
+and you want to transport your file on many file dir,just use above method.
+for example:
+scp -r "*L306*" honghh@192.168.8.8:/home/hui/data  #this command will choose the file including sting "L306" file to transport.
+if you have good idea for this,you can do yourself.

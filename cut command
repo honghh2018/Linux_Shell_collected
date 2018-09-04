@@ -1,0 +1,2 @@
+if you want to cut you column started from 2 col end to the left,you should use below command.
+ll |cut -d ' ' -f 2-   #－ represent the left columns

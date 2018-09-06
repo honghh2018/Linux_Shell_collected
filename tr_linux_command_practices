@@ -1,0 +1,7 @@
+In your works,you frequenctly encounter some proplems,for instances,your text file have continuous character '\n' or some other special symbols
+you should substitute the character with goal string or character,the command as follow must be used.
+take a "a.txt" for example,some blank line in your file,you should use below command to do what you want.
+$tr -s '\n' new.txt |less or tr -s '\n' new.txt >new1.txt
+
+####
+if you want to see whole statue on you top,you should try command "htop" or "ps -fx".

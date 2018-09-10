@@ -1,0 +1,6 @@
+sometime,you would encounter file with number and space,if you want to substitute themself,the followed command must be given.
+
+$cat file.name |sed 's/[0-9]\+//' |less or $cat file.name |sed 's/\d\+//' |less 
+
+
+

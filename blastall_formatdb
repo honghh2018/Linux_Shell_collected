@@ -3,7 +3,7 @@ must be installed.
 first and foremost,we should find the non-redundancy .fa file and read your query seq file(fa).
 when above work alread done,we can begin the maping with blast software.
 Firstly,we should use the formatdb software to build the database with .fa file,command show folow:
-$/home/hui/formatdb -i <fasta file> -p F -o T  #F was nucleic acid 
+$/home/hui/formatdb -i <fasta file> -p F -o T  #F was nucleic acid ＃＃note:short seq created database easier successufully,on the conversely,failure.
 then,command will generated some binary file in your local work dir.
 so,we should use blastall software.
 $/home/hui/blastall -p blastn -d <prefix database> -i <query fasta> -e 1e-10 -v 1 -m 8 -b 10 -o output_file.txt
@@ -14,7 +14,7 @@ Comment:-p program type :blastn(nucleotide mapping nucleotide database) blastp(p
 -e expectation value(mean value)    
 -v one-line description(default 500)
 -m display format,8 was tabular(table)
--b output result counts
+-b output result counts,record numbers
 -o output file
 
 -m 8 output format annotation:
@@ -22,6 +22,3 @@ left to right
 query id,subject id,identity,hit length,missing counts,gap counts,query begin,query end,subject begin,subject end,E-value,Score
 remark:high score and low E must be selected.
 all information regarding blast software,you should go to see the home page with blast.
-
-
-

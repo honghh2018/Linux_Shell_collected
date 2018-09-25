@@ -1,0 +1,3 @@
+split -l 1 a.txt  #based on one line,just -l given # this command function was split file with one line onto ten files
+cat xaa xab xac xad xae xaf >1.txt #Ｍerge multiple file into one file ,the sort no change
+diff a.txt b.txt ＃compare two file whether same or not

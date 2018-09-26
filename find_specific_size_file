@@ -1,5 +1,7 @@
 
 
-find your file greater than 50M and filter with awk command,condition with match "M" suffix,print $i，then sort with ASCII
+find your file greater than 50M and filter with awk command,condition with match "M" suffix,print $i，then sort -n with ASCII
 The goal for this command was found the special size file on your computer.
  for i in `find /home/bmk/ -size +50M`;do du -sh $i;done|awk '{if ($1~/M/) print $i}' |sort -n
+ or
+ for i in `find /home/bmk/ -size +50M`;do du -sh $i;done|awk '{if ($1~/G/) print $i}' |sort -n  #match "G"

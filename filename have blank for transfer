@@ -1,0 +1,3 @@
+For this problem,your filename have blank,you should try below command!
+
+scp -r honghh@10.20.3.13:/your/path/honghh/BMK150616-R13-ZX04/cleandata "/media/dashen/Seagate Backup Plus Drive"

@@ -1,0 +1,1 @@
+grep Get* -R ./   #grap all file including Get* under the dir .  

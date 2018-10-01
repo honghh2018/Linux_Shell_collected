@@ -1,0 +1,5 @@
+
+#comments:grep -i　ignore capitalization and lowercase
+#comments:sed s/\.1$//g  means match the string end and substitute it with blank.
+
+for i in `cat filter_id.list|sed s/\.1$//g`;do cat Rubus_occidentalis_v1.1.new.gff3|grep -i $i;done

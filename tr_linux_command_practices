@@ -2,6 +2,7 @@ In your works,you frequenctly encounter some proplems,for instances,your text fi
 you should substitute the character with goal string or character,the command as follow must be used.
 take a "a.txt" for example,some blank line in your file,you should use below command to do what you want.
 $tr -s '\n' new.txt |less or tr -s '\n' new.txt >new1.txt
+$cat format.txt |tr -s '\n' >new.txt  #if above no work,try this command again.
 
 ####
 if you want to see whole statue on you top,you should try command "htop" or "ps -fx".

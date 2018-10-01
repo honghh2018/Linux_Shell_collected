@@ -1,0 +1,27 @@
+As you have a file like below
+Bras_T20747.1
+Bras_T18766.1
+Bras_T27124.1
+Bras_T17997.1
+Bras_T17144.1
+Bras_T12952.1
+Bras_T17774.1
+Bras_T24067.1
+Bras_T27257.1
+Bras_T19995.1
+Bras_T06725.1
+Bras_T20893.1
+Bras_T09894.1
+Bras_T19877.1
+Bras_T23198.1
+Bras_T24535.1
+Bras_T17140.1
+Bras_T26172.1
+Bras_T18177.1
+you can transfer it to below format
+Bras_T20747|Bras_T18766|Bras_T27124|Bras_T17997|Bras_T17144|Bras_T12952|Bras_T17774|Bras_T24067|Bras_T27257|Bras_T19995|Bras_T06725|Bras_T20893|Bras_T09894|Bras_T19877|Bras_T23198|Bras_T24535|Bras_T17140|Bras_T26172|Bras_T18177
+then use the grep filter the goal file gff3 like below
+cat Rubus_occidentalis_v1.1.gff3 |grep -v -E 'Bras_T20747|Bras_T18766|Bras_T27124|Bras_T17997|Bras_T17144|Bras_T12952|Bras_T17774|Bras_T24067|Bras_T27257|Bras_T19995|Bras_T06725|Bras_T20893|Bras_T09894|Bras_T19877|Bras_T23198|Bras_T24535|Bras_T17140|Bras_T26172|Bras_T18177' > Rubus_occidentalis_v1.1.new.gff3
+The redirection file of result have no the sring of that you given.
+#comments:grep -v　means no match the string that you given. grep -E means regular expression.
+

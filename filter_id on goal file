@@ -1,0 +1,8 @@
+
+
+for i in `cat filter_id_2018.txt`;do cat perl_test/Rubus_occidentalis_v1.1.lifted_1.gff3 |grep -i -E $i;done
+
+#filter_id_2018.txt need filtered id on Rubus_occidentalis_v1.1.lifted_1.gff3.
+#grep -i :ignore capitalization and lowercase
+#-E  regular express
+#$i shell for circle of variable 

@@ -1,0 +1,5 @@
+Firstly,you're processing file where filled with lots of blank in it,which below command you should try.
+sed '/^\s*$/d' test.txt
+Secondly,awk command that was fulfilled this work with substituted blank where your file filled with blank.
+awk NF test.txt |less
+

@@ -4,4 +4,11 @@ cat Rubus_occidentalis_v1.1.lifted.gff3|sed s/\;Name=.*//g|awk 'BEGIN{OFS="\t";}
 else if($1~/##.*/){print $0}else{print $0".1"}}'|sed s/\;Alias=.*//g|sed s/\=ID//g|awk 'BEGIN{OFS="\t"} 
 {if($3~/exon/) sub(":exon",".1:exon",$9);print $0}'|awk 'BEGIN{OFS="\t"} {if($3~/CDS/) sub(":cds",".1:cds",$9);print $0}'|less -SN 
 
+＃＃＃＃gff3　standard format filter command
+ cat Rubus_occidentalis_v1.1.lifted_3.gff3 |awk 'BEGIN{OFS="\t"}{if($3~/mRNA/){sub(";",".1;",$9)}print $0}' |awk 'BEGIN{OFS="\t"}{if($3~/exon/){print $0".1"}else if($3~/CDS/){print $0".1"}else{print $0}}' >Rubus_occidentalis_v1.1.lifted_4.gff3
+
+
+
+
+
 good luck.

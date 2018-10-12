@@ -1,0 +1,6 @@
+Need install apt-get install dos2unix to eliminate the symbol ^M
+$sudo apt-get install dos2unix
+$dos2unix file.fa
+$less -U file.fa  #delete the ^M 
+
+

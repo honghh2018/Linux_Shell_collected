@@ -1,0 +1,2 @@
+filter fpkm zero
+cat samples.isoforms.expression.xls |awk 'BEGIN{OFS="\t"}{if($0!~/0.000000/){print $0}}'|less

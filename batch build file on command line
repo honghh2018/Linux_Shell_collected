@@ -1,0 +1,4 @@
+#produce batch file with successfully match the awk on column 2 
+#comment:use the single quota and double quota like below command
+
+for i in {1..9};do cat kmeans_cluster_PEG.txt |awk 'BEGIN{OFS="\t"}{if($2=="'$i'"){print $0}}' > PEG/cluster_$i;done

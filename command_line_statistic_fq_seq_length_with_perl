@@ -1,0 +1,4 @@
+First <> filter the first ">".It will stop when reach next ">".
+scalar variable $sum　stick to the seq fragment into one line string,and then calculate the length of the scalar $sum
+
+perl -e '<>;while($line=<>){chomp($line);if($line =~/\>/){last;}else{$sum .= $line}};print length $sum,"\n"' m180211_174100_42278_c101412942550000001823292804121874_s1_p0.1.subreads.fasta

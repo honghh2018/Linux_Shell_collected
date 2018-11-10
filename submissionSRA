@@ -6,9 +6,10 @@ $ll data_gz/ |awk '{print $9}' | sed s/_J414-01//g |sed s/_good//g|sed s/.gz//g 
 comments:
 The sra submission including second generation or third generation of data, the format in excel have the chioce of drop-down menu,which 
 you can select the HD5 format.
-The fastq just choose fastq format token.
+The fastq just choose fastq format.
 
-The three generation submission need four file with .bas and three bax data.
+The three generation submission need four files with .bas and three bax data, which fill in the SRAmetadata.xlsx left 4 columns and the title name 
+with the prefix of .bax.
 
 
 

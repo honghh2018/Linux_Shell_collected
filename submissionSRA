@@ -1,5 +1,14 @@
-Need fastq clean data for read,and NCBI will turn the fastq into SRA
-you need to name the number of fastq.the below command should be used.
-
+Need fastq clean data for read, and NCBI will turn the fastq into SRA
+you need to name the number of fastq. the below command should be used.
+Preprocessing:
 $ll data_gz/ |awk '{print $9}' | sed s/_J414-01//g |sed s/_good//g|sed s/.gz//g >file or STDOUT
 //you should copy this line into NCBI's form named "samplename".
+comments:
+The sra submission including second generation or third generation of data, the format in excel have the chioce of drop-down menu,which 
+you can select the HD5 format.
+The fastq just choose fastq format token.
+
+The three generation submission need four file with .bas and three bax data.
+
+
+

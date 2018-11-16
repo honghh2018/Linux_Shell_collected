@@ -1,0 +1,3 @@
+
+#workflow executive the R scripts like below Asynchronous　conducte
+for i in {1..6};do Rscript /opt/No_Ref_Trans/v2.3.2/bin/DEG_Analysis/v3.4/bin/heatmap.R -i cluster/cluster$i.list -S column -o position_dir/cluster$i.txt;done

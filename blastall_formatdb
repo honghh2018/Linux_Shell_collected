@@ -20,6 +20,7 @@ Comment:-p program type :blastn(nucleotide mapping nucleotide database) blastp(p
 -b output result counts,record numbers
 -o output file
 
+-m 0 output the specific information that map the database.
 -m 8 output format annotation:
 left to right
 query id,subject id,identity,hit length,missing counts,gap counts,query begin,query end,subject begin,subject end,E-value,Score

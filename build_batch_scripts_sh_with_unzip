@@ -1,0 +1,4 @@
+As we process the file that need decompression like *gz, the below command should be used
+#ls Rawdata/*gz |perl -ne 'if($_ =~m/fq.gz/){print "gzip -d $_"}' >decompress.sh
+#s Rawdata/*gz |perl -ne 'print "gzip -d $_"' >decompress.sh 
+#comment:both of them worked.

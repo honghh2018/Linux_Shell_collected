@@ -1,0 +1,7 @@
+The compressed type of bz2 or tar.bz2 should process by the Linux command as bzip2 -d or tar jxvf, which one we chosen according to the
+file whether like bz2 and tar.bz2 or not.
+Firstly, upon the work requested, the commmand bzip2 -d and tar jxvf is token by the differetial compression file type.
+For example,
+$bzip2 -d *.bz2
+$tar jxvf *.tar.bz2
+

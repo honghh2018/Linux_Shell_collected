@@ -1,0 +1,7 @@
+As some sort of file need to adjust column sort,you should copy to the excel software and adjust the column you want.
+after you saved into unicode txt,you need to take dos2unix command to turnover the format,then you can transport to the setcomputers
+
+dos2unix *.txt
+
+
+

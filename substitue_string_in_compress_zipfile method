@@ -1,0 +1,10 @@
+while your files that was encomressed by zip command after was needed to modify,so we should take vim editor to brower zipfile since to 
+choose your target file than press 'enter' to modify the goal string.
+1.vim xxx.zip
+2./index.html
+3.enter
+3.ctrl +c and ctrl +v
+
+good lucky!
+
+

@@ -1,0 +1,51 @@
+Bioperl module in which its packages comprise Bio::Seq and Bio::SeqIO was tremendously exquisit to cope with bioinformation in linux system.
+Bioperl was designed for perl language to analyize bioinfo that consist of sort of bio-packages,as Bio::Seq and Bio::SeqIO,in addtions, those
+ regularly was used, when it have me conduct the information of biology from now on.
+ first of all, perl in web is going to install at you computer with the manual. besides, command line using perl -MCPAN -e shell get into
+ perl module interface where you type string 'install Bio::Seq' or 'Bio::SeqIO' to setup one.until all mission above function, perl 
+ scripts since were going to take those module for your jobs.
+ In other aspects, the example fellow below:
+ #!/usr/bin/perl -w
+use strict;
+use warnings;
+use Bio::Seq;
+use Bio::SeqIO;
+
+my $input=shift;
+
+
+my $count=10;
+my $seqio=Bio::SeqIO->new('-format'=>'fasta',-file=>"$input");
+#my $seqobj=Bio::Seq->new(-display_id=>)
+while(my $seq=$seqio->next_seq()){
+        my  $gene_id=$seq->display_id;
+        #print $gene_id,"\n";
+        my $seq_string=$seq->seq();
+        my $tran=$seq->translate(); #invoking translate function 
+        my $protein=$tran->seq;
+        print $seq_string,"->\n",$protein,"\n";
+
+        #my $seq_string=$seq->seq;
+        #my $seq_string=$seq->subseq(10,50); #slice the string arrange from 10 to 50
+        #print $seq_string,"\n";
+        $count--;
+        my $seqobj=Bio::Seq->new('-display_id'=>$gene_id,-seq =>$seq_string);
+        my @traits=$seqobj->get_SeqFeatures();
+        foreach my $traits(@traits){
+                print "Feature:",$traits->primary_tag()," start",$traits->start," end";
+                print $traits->end()," strand ",$traits->strand,"\n";
+                print "Feature sequence is ",$traits->seq->seq(),"\n";
+
+        }
+        $count--;
+        if($count<1){
+                exit;
+        }
+
+
+}
+
+ 
+ 
+
+

@@ -1,0 +1,9 @@
+if specific files are going to delete for releasing space,whereas its size take over giant space at one directories.
+on the basis of the reason, we should take that file nominated, that people know its depth at calling directories.since command line
+show fellowing that we are look forward to.
+du -ah --max-depth=2,1 or whatever depth number you want.
+full command ly below:
+du -ah --max-depth=2 ./ or /home or directories you want
+
+
+

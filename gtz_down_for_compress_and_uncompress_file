@@ -1,0 +1,5 @@
+Ubuntu 17.4.0.4 for instance,
+above all, the website for gtz software now at the git repository, so it was simple that using git clone for download.
+for these reasons,sudo apt-get install git must be put over.
+$sudo apt-get install git and then take git clone https://github.com/Genetalks/gtz.git for download
+utimately,the installation of direction for gtz must be look.

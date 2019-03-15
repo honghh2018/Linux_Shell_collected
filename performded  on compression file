@@ -1,0 +1,6 @@
+command line showed below:
+
+less *.tgz file or tar -tf *.tgz file to inquire file within the package
+tar zxf *tgz <certain_file> 
+less *zip file
+unzip *.zip <certain_file> -d <dir> that you want to output

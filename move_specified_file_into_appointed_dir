@@ -1,6 +1,6 @@
 USAGE:
 in some case,as long as file specified that you wonder to move to another dir, and then below command line should be used
 ##BrassicanapusL_E420-T01_good_1.fq.gz
-for i in {1..9};do mv gz.Rawdata/*-T0$i_* kyz/;done
+for i in {1..9};do mv gz.Rawdata/*-T0$i\_* kyz/;done
 ##BrassicanapusL_E420-T10_good_1.fq.gz
-for i in {10..62};do mv gz.Rawdata/*-T$i_* kyz/;done
+for i in {10..62};do mv gz.Rawdata/*-T$i\_* kyz/;done

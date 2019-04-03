@@ -1,0 +1,3 @@
+
+find ./ -name "*" -exec grep -l "topGO" {} \; #find string topGO at current directory 
+-l mean match the file including topGO string

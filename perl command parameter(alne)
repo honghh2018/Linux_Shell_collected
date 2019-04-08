@@ -1,0 +1,4 @@
+perl command:
+cat test.list |perl -alne 'print "$F[0]"' |less 
+parameter at linux shell command using perl,as -alne,represented 'a:split defalut space like \s+ and put in default array @F',
+'l:automatically add with '\n','n: loop the file line' respectively.

@@ -1,0 +1,13 @@
+File awk_test content:
+abc	a:b:c:e:1
+abc	g:k:f:o:p
+cat awk_test |awk 'BEGIN{OFS="\t"}{if($1~/abc/){gsub("abc","def",$0);print $0}}' .
+what if substituting string "abc" for string "def", using above command line.
+On the Other aspects, as split string-a:b:c:e:1-by separateor ":" ,in that conditions,command line below should be token.
+cat awk_test|awk 'BEGIN{OFS="\t"}{if($1~/abc/){split($2,a,":");print a[1],a[2],a[3]}}'.
+note:a array elements starting index from one '1' not 0.
+
+substr function for awk:
+Start with 1 not 0; comment show below:
+Commmand line cat awk_test|awk 'BEGIN{OFS="\t"}{a=substr($2,1,2);print a}',in which it executes string truncation-a:b:c:e:1-begin from 1 characters
+cut 2 characters.

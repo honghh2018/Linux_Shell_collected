@@ -1,0 +1,2 @@
+Deleting the match line and below three lines.
+cat sample.fq | sed '/A00601:82:HHLTTDSXX:3:2531:7600:25958 2:N:0:TGAAGACG+TGGCATGT/,+3d' > gz_data/sample.fq

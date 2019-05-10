@@ -1,0 +1,3 @@
+
+awk 'BEGIN{OFS="\t"}{if ($3~/mRNA/){ old=$0;sub("mRNA","gene",$3);sub("\\.[0-9]","",$9);new=$0;s9=$9;sub("ID","Parent",$9); print new"\n"old$9;}
+else if ($3~/CDS/){ old=$0;sub("CDS","exon",$3);sub (".*",".",$8);print $0"\n"old}else {print $0}}'

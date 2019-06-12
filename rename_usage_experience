@@ -4,6 +4,7 @@ Ap_EpC_1.fq  Ap_EpC_2.fq  Ap_EpY_1.fq  Ap_EpY_2.fq  Ap_HeC_1.fq  Ap_HeC_2.fq  Ap
 #rename usage
 $rename _1 _good_1 *.fq #batch substitute "_1" with "_good_1"　　＃first string take regular expression,second string was your modified format,third take all that you need to fix file.
 $rename _2 _good_2 *.fq  #batch replace "_2" into "_good_2" 
+#rename _new "" * #altering _new string into empty   SHB6.5_11-T17_good_1.fq_new into SHB6.5_11-T17_good_1.fq
 the result show following:
 Ap_EpC_good_1.fq  Ap_EpY_good_1.fq  Ap_HeC_good_1.fq  Ap_HeY_good_1.fq  Ap_MgC_good_1.fq  Ap_MgY_good_1.fq
 Ap_EpC_good_2.fq  Ap_EpY_good_2.fq  Ap_HeC_good_2.fq  Ap_HeY_good_2.fq  Ap_MgC_good_2.fq  Ap_MgY_good_2.fq

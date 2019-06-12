@@ -1,0 +1,9 @@
+software samtools used for sort bam file of notification 
+samtools sort in.bam out.sorted.bam  
+comments:it head tag had no altered,using samtools view -H  out.sorted.bam to check the header tag displaying still unsort, 
+when commands above completed. the problem was bug along with samtools sort command, which the tag still unsorted, however files bam had already sorted.
+As the header you want to change, the picard of java sort like SortSam.jar subprogram(subroutine) should be token.
+Usage:
+$java -jar /share/nas2/genome/biosoft/picard-tools/current/SortSam.jar I=../FO.sam O=newsorted.bam SORT_ORDER=coordinate
+
+

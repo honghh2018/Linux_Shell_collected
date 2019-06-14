@@ -7,3 +7,4 @@ Usage:
 $java -jar /share/nas2/genome/biosoft/picard-tools/current/SortSam.jar I=../FO.sam O=newsorted.bam SORT_ORDER=coordinate
 
 comments:SORT_ORDER=coordinate tip the sort bam header tranfer header tag of unsorted into coordinate 
+java -jar  genome/biosoft/picard-tools/1.94/AddOrReplaceReadGroups.jar I=/FO_bam/scripts/sort1.bam.bam O=FO_bam/scripts/sort1.bam.bam.sorted.bam SO=coordinate RGID=sort1.bam RGLB=library RGPL=ILLUMINA RGPU=machine RGSM=sort1.bam

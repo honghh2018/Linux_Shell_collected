@@ -8,7 +8,7 @@ then,command will generated some binary file in your local work dir.
 so,we should use blastall software.
 $/home/hui/blastall -p blastn -d <prefix database> -i <query fasta> -e 1e-10 -v 1 -m 8 -b 10 -o output_file.txt
 $blastall -p tblastx -d database/Demo.Unigene.fa -i ../Analysis_antifreezing_protein/antifreeze_protein.fa -e 1e-10 -v 1 -m 8 -b 10 -o output_file_protein.txt
-Note:tblastx mean input nucleotide seq that translate into protein to mapping to the database translate into protein yet.
+Note:tblastx represented that inputting nucleotide seq should be translate into protein to mapping to the database translate into protein yet.
 
 Comment:-p program type :blastn(nucleotide mapping nucleotide database) blastp(protein sequence) blastx(nucleotide maping protein database)
                          and so on. 

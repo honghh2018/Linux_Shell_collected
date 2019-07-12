@@ -26,3 +26,20 @@ left to right
 query id,subject id,identity,hit length,missing counts,gap counts,query begin,query end,subject begin,subject end,E-value,Score
 remark:high score and low E must be selected.
 all information regarding blast software,you should go to see the home page with blast.
+
+Additional comments:
+Formatdb to create database for the sake of blast.
+step1:blast seq
+blastx -num_descriptions 100 -num_alignments 2 -evalue 1e-5 -db ~/ncbi/Nt_Nr_division/nr_PLN -query ~/query/Q686.fa -num_threads 2 -out ~/Result/blastx_table1.blast
+step2:convert specific file,blastx_table1.blast, into tab format.
+perl ~/blast/bin/blast_parser.pl -nohead -eval 1 -tophit 1 -m 0 -topmatch 1  blastx_table1.blast > blastx_table1.tab.best
+Note: -num_descriptions 100 means showing 100 descriptions in  blastx_table1.blast file as:
+       ref|XP_008238972.1|  PREDICTED: uncharacterized protein LOC103337...  60.8    6e-09
+       ref|XP_008373782.1|  PREDICTED: uncharacterized protein LOC103437...  48.5    6e-06 here display two description. 
+      -num_alignments 2 means showing two concrete mapping information as:
+      Query  260  LQCFYCHGFGHIEAVYpskassvppppSHLQGMIAQYPSHGGNQQWVADTGANTHITNDL  81
+                  ++C  C  +GH      ++ +     P HL  M AQ  S      WV DTGAN+HITNDL
+      Sbjct  353  IRCQICGRYGHSALDCYNRLNMSNEGPQHLTAMTAQQSSSPRPPNWVVDTGANSHITNDL  412
+
+
+

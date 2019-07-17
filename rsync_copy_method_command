@@ -1,0 +1,5 @@
+rsync -r -z -v src honghh@10.20.3.13:/home/honghh/Tools/rsync_like_scp_test mean transfer src directory into remote host,IP 10.20.3.13.
+note:-r transfer dir using recursive.
+     -z compress file
+     -v showing information when transferring file.
+     

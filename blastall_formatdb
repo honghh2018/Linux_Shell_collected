@@ -17,7 +17,7 @@ Comment:-p program type :blastn(nucleotide mapping nucleotide database) blastp(p
 -e expectation value(mean value)    
 -v one-line description(default 500)
 -m display format,8 was tabular(table)
--b output result counts,record numbers
+-b output tabular result counts,record numbers
 -o output file
 
 -m 0 output the specific information that map the database.

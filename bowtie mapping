@@ -1,0 +1,11 @@
+The short reads mapping into reference been down to bowtie software need to be notice:
+Initially,database applied by bowtie need be setup with bowtie-build,and the index name with Gallus_gallus.GRCg6a_96.genome.fa
+Moreover,bowtie -v 2 -S -t -p 8 -q Gallus_gallus.GRCg6a_96.genome.fa sRNA_data/Chicken_R181-01-S01_1.fq bowpeout.sam &>s01.log
+
+comment:-v mismatch [0~3]
+        -S produce sam file :bowpeout.sam
+        -t laying process record into *.log
+        -p thread number:8
+        -q input fastq :sRNA_data/Chicken_R181-01-S01_1.fq
+         index:Gallus_gallus.GRCg6a_96.genome.fa [not fa file just prefix]
+

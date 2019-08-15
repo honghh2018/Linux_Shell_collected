@@ -1,0 +1,1 @@
+qstat |awk '{print $1}' |while read id;do qdel $id;done

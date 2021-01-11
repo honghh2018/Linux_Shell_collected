@@ -42,4 +42,11 @@ Note: -num_descriptions 100 means showing 100 descriptions in  blastx_table1.bla
       Sbjct  353  IRCQICGRYGHSALDCYNRLNMSNEGPQHLTAMTAQQSSSPRPPNWVVDTGANSHITNDL  412
 
 
-
+###latest blast 2.9.0+
+makeblastdb -in genome.fasta -dbtype nucl -parse_seqids -out ./index
+database sequence:genome.fasta 
+dbtype:'nucl' was nuclear; 'prot' was protein
+the database name -out
+###mapping:
+## mapping the query sequence into nuclear database
+blastn -query input.fa -db ./index -evalue 1e-6 -outfmt 6 -num_threads 6 -out out_file
